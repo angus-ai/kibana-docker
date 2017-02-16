@@ -6,11 +6,9 @@ endif
 ifdef STAGING_BUILD_NUM
 VERSION_TAG=$(ELASTIC_VERSION)-${STAGING_BUILD_NUM}
 KIBANA_DOWNLOAD_URL=http://staging.elastic.co/$(VERSION_TAG)/downloads/kibana/kibana-${ELASTIC_VERSION}-linux-x86_64.tar.gz
-X_PACK_URL=http://staging.elastic.co/$(VERSION_TAG)/downloads/kibana-plugins/x-pack/x-pack-${ELASTIC_VERSION}.zip
 else
 VERSION_TAG=$(ELASTIC_VERSION)
 KIBANA_DOWNLOAD_URL=https://artifacts.elastic.co/downloads/kibana/kibana-${ELASTIC_VERSION}-linux-x86_64.tar.gz
-X_PACK_URL=x-pack
 endif
 
 REGISTRY=docker.elastic.co
@@ -20,7 +18,6 @@ LATEST_IMAGE=$(IMAGE):latest
 
 export ELASTIC_VERSION
 export KIBANA_DOWNLOAD_URL
-export X_PACK_URL
 export VERSIONED_IMAGE
 export VERSION_TAG
 

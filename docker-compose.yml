@@ -6,7 +6,6 @@ services:
       context: build/kibana
       args:
         KIBANA_DOWNLOAD_URL: "${KIBANA_DOWNLOAD_URL}"
-        X_PACK_URL: "${X_PACK_URL}"
     image: "${VERSIONED_IMAGE}"
     links:
       - elasticsearch
