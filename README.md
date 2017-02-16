@@ -1,7 +1,7 @@
 ## Description
 
-This is the official Kibana image created by Elastic Inc.
+Kibana docker image
 
 Documentation can be found on the [Elastic website](https://www.elastic.co/guide/en/kibana/current/docker.html).
 
-Kibana is built with [X-Pack](https://www.elastic.co/guide/en/x-pack/current/index.html).
+Unlike the official Kibana image by Elastic, this one IS NOT built with X-Pack
