@@ -17,6 +17,8 @@ ADD bin/kibana-docker /usr/local/bin/
 # Add a self-signed SSL certificate for use in examples.
 ADD ssl/kibana.example.org.* /usr/share/kibana/config/
 
+COPY kibana-plugins /usr/share/kibana/plugins/
+
 RUN usermod --home /usr/share/kibana kibana
 ENV PATH=/usr/share/kibana/bin:$PATH
 CMD /usr/local/bin/kibana-docker
