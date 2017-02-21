@@ -7,12 +7,13 @@ ifdef STAGING_BUILD_NUM
 VERSION_TAG=$(ELASTIC_VERSION)-${STAGING_BUILD_NUM}
 KIBANA_DOWNLOAD_URL=http://staging.elastic.co/$(VERSION_TAG)/downloads/kibana/kibana-${ELASTIC_VERSION}-linux-x86_64.tar.gz
 else
-VERSION_TAG=$(ELASTIC_VERSION)
+VERSION_TAG=$(ELASTIC_VERSION)_with_html_plugin
 KIBANA_DOWNLOAD_URL=https://artifacts.elastic.co/downloads/kibana/kibana-${ELASTIC_VERSION}-linux-x86_64.tar.gz
 endif
 
 REGISTRY=docker.elastic.co
-IMAGE=$(REGISTRY)/kibana/kibana
+ANGUS_REGISTRY=index.docker.io
+IMAGE=$(ANGUS_REGISTRY)/rafou/kibana-docker-noxpack
 VERSIONED_IMAGE=$(IMAGE):$(VERSION_TAG)
 LATEST_IMAGE=$(IMAGE):latest
 
