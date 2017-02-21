@@ -7,7 +7,7 @@ ifdef STAGING_BUILD_NUM
 VERSION_TAG=$(ELASTIC_VERSION)-${STAGING_BUILD_NUM}
 KIBANA_DOWNLOAD_URL=http://staging.elastic.co/$(VERSION_TAG)/downloads/kibana/kibana-${ELASTIC_VERSION}-linux-x86_64.tar.gz
 else
-VERSION_TAG=$(ELASTIC_VERSION)_with_html_plugin
+VERSION_TAG=$(ELASTIC_VERSION)_angus_full
 KIBANA_DOWNLOAD_URL=https://artifacts.elastic.co/downloads/kibana/kibana-${ELASTIC_VERSION}-linux-x86_64.tar.gz
 endif
 
