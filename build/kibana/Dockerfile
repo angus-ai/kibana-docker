@@ -17,8 +17,13 @@ ADD bin/kibana-docker /usr/local/bin/
 # Add a self-signed SSL certificate for use in examples.
 ADD ssl/kibana.example.org.* /usr/share/kibana/config/
 
-COPY kibana-plugins /usr/share/kibana/plugins/
-
 RUN usermod --home /usr/share/kibana kibana
+
+RUN /usr/share/kibana/bin/kibana-plugin install https://github.com/angus-ai/kibana_ext_metrics_vis/releases/download/0.1.1/kibana_ext_metrics_vis-0.1.1.zip
+
+RUN /usr/share/kibana/bin/kibana-plugin install https://github.com/angus-ai/kbn_c3js_vis/releases/download/v0.0.1/kbn_c3js_vis-0.0.1.zip
+
+RUN /usr/share/kibana/bin/kibana-plugin install https://github.com/angus-ai/kibana-html-plugin/releases/download/v0.0.4/kibana-html-plugin-0.0.4.zip
+
 ENV PATH=/usr/share/kibana/bin:$PATH
 CMD /usr/local/bin/kibana-docker
