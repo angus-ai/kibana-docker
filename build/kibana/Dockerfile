@@ -19,9 +19,9 @@ ADD ssl/kibana.example.org.* /usr/share/kibana/config/
 
 RUN usermod --home /usr/share/kibana kibana
 
-RUN /usr/share/kibana/bin/kibana-plugin install https://github.com/angus-ai/kibana_ext_metrics_vis/releases/download/0.1.1/kibana_ext_metrics_vis-0.1.1.zip
+RUN /usr/share/kibana/bin/kibana-plugin install https://github.com/angus-ai/kibana_ext_metrics_vis/releases/download/0.1.2/kibana_ext_metrics_vis-0.1.2.zip
 
-RUN /usr/share/kibana/bin/kibana-plugin install https://github.com/angus-ai/kbn_c3js_vis/releases/download/v0.0.1/kbn_c3js_vis-0.0.1.zip
+RUN /usr/share/kibana/bin/kibana-plugin install https://github.com/angus-ai/kbn_c3js_vis/releases/download/v0.0.2/kbn_c3js_vis-0.0.2.zip
 
 RUN /usr/share/kibana/bin/kibana-plugin install https://github.com/angus-ai/kibana-html-plugin/releases/download/v0.0.4/kibana-html-plugin-0.0.4.zip
 
