@@ -14,8 +14,6 @@ ADD config/kibana.yml /usr/share/kibana/config/
 # variables and translate them to Kibana CLI options.
 ADD bin/kibana-docker /usr/local/bin/
 
-ADD custom_files/grid.js /usr/share/kibana/src/core_plugins/kibana/public/dashboard/directives/
-
 # Add a self-signed SSL certificate for use in examples.
 ADD ssl/kibana.example.org.* /usr/share/kibana/config/
 

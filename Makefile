@@ -10,7 +10,7 @@ else
 ifndef VERSION_TAG
 VERSION_TAG=$(ELASTIC_VERSION)_angus_full
 endif
-KIBANA_DOWNLOAD_URL=https://artifacts.elastic.co/downloads/kibana/kibana-${ELASTIC_VERSION}-linux-x86_64.tar.gz
+KIBANA_DOWNLOAD_URL=https://github.com/angus-ai/kibana/releases/download/v${ELASTIC_VERSION}-angus/kibana-${ELASTIC_VERSION}-angus-linux-x86_64.tar.gz
 endif
 
 REGISTRY=docker.elastic.co
